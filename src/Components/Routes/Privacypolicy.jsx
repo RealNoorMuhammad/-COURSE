@@ -1,17 +1,17 @@
 import React from 'react'
 import Navbar from '../Pages/Navbar'
 import Header from '../Pages/Header'
+import Cources from '../Pages/Pricavy'
 import Footer from '../Pages/Footer'
-import Contact from '../Pages/Contact'
-import Spinner from '../Pages/Spinner'
 
-export default function() {
+
+export default function Courses1() {
   return (
     <>
-
+    
     <Navbar/>
-    <Header name="Certificate-Generator"/>
-    <Contact/>
+    <Header name="Privacy Policy"/>
+    <Cources/>
     <Footer/>
     </>
   )

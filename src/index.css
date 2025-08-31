@@ -252,3 +252,642 @@
   white-space: nowrap;
   text-transform: uppercase;
 }
+
+
+.color{
+  color: #ffcc00 !important;
+}
+
+
+.sealimg{
+  width: 100px;
+
+}
+
+
+/* Even smaller for mobile */
+@media (max-width: 576px) {
+
+.sealimg{
+  width: 35px;
+    position: relative;
+  bottom: 17px;
+}
+
+}
+.fonta{
+  font-size: 40px;
+}
+
+@media (max-width: 576px) {
+
+.fonta{
+  font-size: 28px;
+  position: relative;
+  top: 17px;
+}
+
+}
+.centeritall{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+.download-btn {
+  margin-top: 1.5rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+
+  background: linear-gradient(90deg, #fbbf24, #d97706);
+  color: white;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.download-btn:hover {
+
+  background: linear-gradient(90deg, #f59e0b, #b45309);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.download-btn:active {
+  transform: scale(0.98);
+}
+
+.download-btn.disabled {
+  background: #d1d5db;
+  color: #6b7280;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.privacy-container {
+  font-family: "Georgia", serif;
+  background: #fdfaf6;
+  color: #333;
+  padding: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+  border: 2px solid #c7b198;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.privacy-header {
+  text-align: center;
+  border-bottom: 2px solid #c7b198;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+}
+
+.privacy-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4b2e83; /* university purple */
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.privacy-content h2 {
+  font-size: 1.4rem;
+  margin-top: 25px;
+  color: #4b2e83;
+  border-left: 4px solid #c7b198;
+  padding-left: 10px;
+}
+
+.privacy-content p {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.privacy-footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 2px solid #c7b198;
+  padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==== Header ==== */
+.uni-header {
+ 
+  color: gold;
+  padding: 20px;
+  border-bottom: 5px solid gold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.uni-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.uni-header .subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.crest {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* ==== Main Content ==== */
+.uni-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* ==== Buttons ==== */
+.uni-btn {
+  background: gold;
+  color: #800000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 3px solid #800000;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.uni-btn:hover {
+  background: #ffd700;
+  transform: scale(1.05);
+}
+
+.x-btn {
+  margin-top: 20px;
+  background: #1d9bf0;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.x-btn:hover {
+  background: #0d8ddf;
+}
+
+/* ==== Meme Card ==== */
+.meme-card {
+  margin-top: 30px;
+  max-width: 600px;
+  background: #fffef5;
+  padding: 30px;
+  border: 5px double #800000;
+  border-radius: 16px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+/* ==== Footer ==== */
+.uni-footer {
+
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  border-top: 5px solid rgb(0, 0, 0);
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Scam University Theme */
+.scam-uni {
+
+
+  padding-bottom: 50px;
+  border-top: 8px solid rgb(245, 0, 0);
+}
+
+.hero-section {
+  background: #fef5e7;
+  padding: 40px 20px;
+  border-bottom: 4px solid rgb(252, 0, 0);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.scam-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #7a3b00;
+  text-shadow: 1px 1px 2px gold;
+}
+
+.scam-subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.quiz-header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #7a3b00;
+  border-bottom: 2px dashed gold;
+  padding-bottom: 10px;
+}
+
+.quiz-list .scam-card {
+  background: #fffef9;
+  border: 2px solid rgb(205, 0, 0);
+  border-radius: 12px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #5a3300;
+  transition: all 0.3s ease-in-out;
+}
+
+.quiz-list .scam-card:hover {
+  background: #fff3d4;
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.quiz-note {
+  display: block;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #777;
+  margin-top: 4px;
+}
+
+.scam-footer {
+  margin-top: 40px;
+  padding: 20px;
+
+  border-top: 2px solid rgb(255, 255, 255);
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.quiz-page {
+
+  padding: 2rem;
+
+  min-height: 100vh;
+  color: #222;
+}
+
+.quiz-heading {
+  font-size: 2.5rem;
+
+  color: #000000;
+
+  margin-bottom: 0.5rem;
+}
+
+.guru {
+  color: #000000;
+
+}
+
+.quiz-subtitle {
+  font-size: 1.2rem;
+text-align: center;
+  border: 2px dashed red;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.quiz-container {
+  background: #fff;
+  border: 5px solid rgb(255, 0, 0);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+
+}
+
+.question-box {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.q-number {
+
+  font-weight: 900;
+}
+
+.options-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-btn {
+  margin: 0.4rem 0;
+  padding: 0.8rem;
+  background: #ffecb3;
+  border: 2px solid #f50000;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.option-btn:hover {
+  background: #ffe082;
+  transform: scale(1.05);
+}
+
+.option-btn.selected {
+  background: #ff7043;
+  color: #fff;
+  border-color: #bf360c;
+}
+
+.next-area {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.next-btn {
+  background: #000000;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.next-btn:hover {
+  background: #1d1d1d;
+
+}
+
+.centerit{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scam-banner {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: repeating-linear-gradient(
+    45deg,
+    #000000,
+    #ff1212 10px,
+    #000000 10px,
+    #000000 20px
+  );
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0.6; }
+}

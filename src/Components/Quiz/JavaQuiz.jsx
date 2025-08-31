@@ -5,7 +5,7 @@ import Footer from '../Pages/Footer'
 import Questions from './javaQues'
 
 export default function JavaQuiz() {
-    let route = "/courses/java"
+    let route = "/courses/quiz-week-1"
     return (
         <>
             <Navbar/>

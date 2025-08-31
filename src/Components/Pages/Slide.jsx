@@ -52,14 +52,14 @@ export default function Slide() {
 
                 {/* Social Links */}
                 <div className="d-flex flex-wrap justify-content-center gap-3">
-                  <Link to="/about" className="animated slideInLeft">
+                  <Link to="https://x.com/i/communities/1960864340224995669" className="animated slideInLeft">
                     <img
                       src="img/twitter.png"
                       alt="Twitter"
                       className="social-logo"
                     />
                   </Link>
-                  <Link to="/courses" className="animated slideInRight">
+                  <Link to="https://dexscreener.com/solana/h8mdxqstymmxutdgwsz923hdx3t7gpdnzwad8n2nascf" className="animated slideInRight">
                     <img
                       src="img/dexscreener.webp"
                       alt="DexScreener"

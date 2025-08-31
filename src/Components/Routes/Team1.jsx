@@ -8,7 +8,7 @@ import Spinner from '../Pages/Spinner'
 export default function Team1() {
   return (
     <>
-    <Spinner/>
+   
     <Navbar/>
     <Header name="Our Team"/>   
     

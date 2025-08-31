@@ -1,152 +1,98 @@
 let Questions = [
   {
-    Question: "Number of primitive data types in Java are?",
-    Options: ["6", "7", "8", "9"],
-    Answer: "8",
-  },
-  {
-    Question: "What is the size of float and double in Java?",
-    Options: ["32 and 64", "32 and 32", "64 and 64", "64 and 32"],
-    Answer: "32 and 64",
-  },
-  {
-    Question:
-      "Automatic type conversion is possible in which of the possible cases?",
-    Options: ["Byte to int", "Int to long", "Long to int", "Short to int"],
-    Answer: "Int to long",
-  },
-  {
-    Question:
-      "Find the output of the following code.\nint Integer = 24;\nchar String = 'I';\nSystem.out.print(Integer);\nSystem.out.print(String);",
-    Options: ["Compile error", "Throws exception", "I", "24 I"],
-    Answer: "24 I",
-  },
-  {
-    Question: "Select the valid statement.",
+    Question: "A guru says he made $10M last year. What’s his office background usually?",
     Options: [
-      "char[] ch = new char(5)",
-      "char[] ch = new char[5]",
-      "char[] ch = new char()",
-      "char[] ch = new char[]",
+      "Real office with employees",
+      "Library full of books",
+      "A green screen with rented Lambo",
+      "Coffee shop WiFi",
     ],
-    Answer: "char[] ch = new char[5]",
+    Answer: "A green screen with rented Lambo",
   },
   {
-    Question:
-      "When an array is passed to a method, what does the method receive?",
+    Question: "Best way to identify a fake guru?",
     Options: [
-      "The reference of the array",
-      "A copy of the array",
-      "Length of the array",
-      "Copy of the first element",
+      "They show income tax returns",
+      "They have student success stories",
+      "They flex a rented sports car",
+      "They quietly build real projects",
     ],
-    Answer: "The reference of the array",
+    Answer: "They flex a rented sports car",
   },
   {
-    Question: "Select the valid statement to declare and initialize an array.",
+    Question: "‘Passive income in 7 days’ is most likely?",
     Options: [
-      "int[] A = {}",
-      "int[] A = {1, 2, 3}",
-      "int[] A = (1, 2, 3)",
-      "int[][] A = {1, 2, 3}",
+      "A solid business model",
+      "A Ponzi scheme with extra steps",
+      "A meditation technique",
+      "A programming bootcamp",
     ],
-    Answer: "int[] A = {1, 2, 3}",
+    Answer: "A Ponzi scheme with extra steps",
   },
   {
-    Question: "Arrays in java are-",
-    Options: ["Object references", "Objects", "Primitive data type", "None"],
-    Answer: "Objects",
-  },
-  {
-    Question: "When is the object created with new keyword?",
-    Options: ["At run time", "At compile time", "Depends on the code", "None"],
-    Answer: "At run time",
-  },
-  {
-    Question: "Identify the correct definition of a package.",
+    Question: "A true Full Stack dev flexes with?",
     Options: [
-      "A package is a collection of editing tools",
-      "A package is a collection of classes",
-      "A package is a collection of classes and interfaces",
-      "A package is a collection of interfaces",
+      "Github commits",
+      "StackOverflow answers",
+      "Shiny Rolex",
+      "Docker containers",
     ],
-    Answer: "A package is a collection of classes and interfaces",
-  },
-
-  {
-    Question:
-      "Identify the return type of a method that does not return any value.",
-    Options: ["int", "void", "double", "None"],
-    Answer: "void",
+    Answer: "Github commits",
   },
   {
-    Question: "Output of Math.floor(3.6) is",
-    Options: ["3", "3.0", "4", "4.0"],
-    Answer: "3.0",
-  },
-  {
-    Question:
-      "Where does the system stores parameters and local variables whenever a method is invoked?",
-    Options: ["Heap", "Stack", "Array", "Tree"],
-    Answer: "Stack",
-  },
-  {
-    Question: "Identify the modifier which cannot be used for constructor.",
-    Options: ["public", "protected", "private", "static"],
-    Answer: "static",
-  },
-  {
-    Question:
-      "What is the variable declared in a class for the use of all methods of the class called?",
-    Options: ["Object", "Instance variables", "Reference variable", "None"],
-    Answer: "Instance variables",
-  },
-  {
-    Question: "What is the implicit return type of constructor?",
+    Question: "What is the PhD in Lamborghini Studies curriculum?",
     Options: [
-      "No return type",
-      "A class object in which it is defined",
-      "void",
-      "None",
+      "How to code APIs",
+      "How to rent cars for photo shoots",
+      "How to run Supabase migrations",
+      "How to build real DApps",
     ],
-    Answer: "A class object in which it is defined",
+    Answer: "How to rent cars for photo shoots",
   },
   {
-    Question:
-      "Identify the prototype of the default constructor.\nPublic class Solution {}",
+    Question: "A guru’s favorite word?",
+    Options: ["Algorithm", "Cashflow", "JavaScript", "Exit scam"],
+    Answer: "Cashflow",
+  },
+  {
+    Question: "What’s the graduation ceremony gift at $COURSE Academy?",
     Options: [
-      "Solution(void)",
-      "Solution()",
-      "public Solution(void)",
-      "public Solution()",
+      "A degree scroll",
+      "Access to real dev projects",
+      "A fake Rolex",
+      "Your own Solana meme coin",
     ],
-    Answer: "public Solution()",
+    Answer: "Your own Solana meme coin",
   },
   {
-    Question:
-      "Identify the correct way of declaring constructor.\nPublic class Solution {}",
+    Question: "If a guru says ‘I’ll teach you the SECRET,’ what is it usually?",
     Options: [
-      "Solution(){}",
-      "public Solution(){}",
-      "Solution(void){}",
-      "Both A and B",
+      "An actual coding framework",
+      "A free YouTube video repackaged",
+      "A legit trading strategy",
+      "The meaning of life",
     ],
-    Answer: "Both A and B",
+    Answer: "A free YouTube video repackaged",
   },
   {
-    Question: "Identify the infinite loop.",
+    Question: "Why do fake gurus love Lamborghinis?",
     Options: [
-      "for(; ;)",
-      "for(int i=0; i<1; i--)",
-      "for(int i=0; ;i++)",
-      "All of the above",
+      "Fast cars attract fast learners",
+      "It makes them look smart",
+      "It distracts from their empty course",
+      "They actually build engines",
     ],
-    Answer: "All of the above",
+    Answer: "It distracts from their empty course",
   },
   {
-    Question: "What is Runnable?",
-    Options: ["Abstract class", "Interface", "Class", "Method"],
-    Answer: "Interface",
+    Question: "What’s the *final boss* of fake gurus?",
+    Options: [
+      "Dropshipping masterclass",
+      "NFT quick flip secrets",
+      "Crypto pump Telegram group",
+      "AI course made by ChatGPT",
+    ],
+    Answer: "AI course made by ChatGPT",
   },
 ];
 

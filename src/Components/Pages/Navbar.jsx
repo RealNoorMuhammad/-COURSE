@@ -52,8 +52,11 @@ export default function Navbar() {
             <NavLink to="/about" className="nav-item nav-link">
               About
             </NavLink>
-            <NavLink to="/courses" className="nav-item nav-link">
-              Courses
+            <NavLink to="/Meme-Generator" className="nav-item nav-link">
+             Meme Generator
+            </NavLink>
+            <NavLink to="/exam" className="nav-item nav-link">
+             Exam
             </NavLink>
 
             {/* Dropdown */}
@@ -66,6 +69,10 @@ export default function Navbar() {
                 Pages
               </NavLink>
               <div className="dropdown-menu fade-down m-0">
+                
+                <NavLink to="/courses" className="dropdown-item">
+               Courses
+                </NavLink>
                 <NavLink to="/team" className="dropdown-item">
                   Our Team
                 </NavLink>
@@ -78,13 +85,16 @@ export default function Navbar() {
               </div>
             </div>
 
-            <NavLink to="/contact" className="nav-item nav-link">
-              Contact
+    <NavLink to="/roast-guru" className="nav-item nav-link">
+        Roast Guru
+            </NavLink>
+            <NavLink to="/Certificate-Generator" className="nav-item nav-link">
+          Certificate
             </NavLink>
 
             {/* External Links */}
             <a
-              href="https://dexscreener.com/"
+              href="https://dexscreener.com/solana/h8mdxqstymmxutdgwsz923hdx3t7gpdnzwad8n2nascf"
               target="_blank"
               rel="noreferrer"
               className="nav-item nav-link"
@@ -92,7 +102,7 @@ export default function Navbar() {
               Dexscreener
             </a>
             <a
-              href="https://twitter.com/"
+              href="https://x.com/i/communities/1960864340224995669"
               target="_blank"
               rel="noreferrer"
               className="nav-item nav-link"

@@ -8,65 +8,53 @@ export default function Service() {
         <div className="container">
           <div className="row g-4">
 
-            {/* 1. Guru Roast Leaderboard */}
-            <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-              <div className="service-item text-center pt-3">
-                <Link to="/guru-roast">
-                  <div className="p-4">
+            {/* 1. Scam Guru Leaderboard */}
+            <div className="col-lg-3 col-sm-6 d-flex">
+              <div className="service-item text-center pt-3 w-100 d-flex flex-column">
+                <Link to="/roast-guru" className="flex-grow-1">
+                  <div className="p-4 h-100 d-flex flex-column">
                     <i className="fa fa-3x fa-fire text-danger mb-4" />
-                    <h5 className="mb-3">Guru Roast Leaderboard</h5>
-                    <p>
-                      Vote on the funniest scam-course memes. Winners get $SOL.  
-                      Pure community fun & engagement!
-                    </p>
+                    <h5 className="mb-3">Scam Guru Leaderboard</h5>
+                  
                   </div>
                 </Link>
               </div>
             </div>
 
-            {/* 2. Certificate Generator */}
-            <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-              <div className="service-item text-center pt-3">
-                <Link to="/certificate">
-                  <div className="p-4">
+            {/* 2. Fake Graduation Certificate */}
+            <div className="col-lg-3 col-sm-6 d-flex">
+              <div className="service-item text-center pt-3 w-100 d-flex flex-column">
+                <Link to="/Certificate-Generator" className="flex-grow-1">
+                  <div className="p-4 h-100 d-flex flex-column">
                     <i className="fa fa-3x fa-certificate text-success mb-4" />
-                    <h5 className="mb-3">Certificate Generator</h5>
-                    <p>
-                      Create a funny “Graduation Certificate” meme.  
-                      Add your name & flex it on Twitter.
-                    </p>
+                    <h5 className="mb-3">Fake Graduation Certificate</h5>
+                    
                   </div>
                 </Link>
               </div>
             </div>
 
-            {/* 3. Leaderboard / Exam System */}
-            <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-              <div className="service-item text-center pt-3">
-                <Link to="/exam">
-                  <div className="p-4">
+            {/* 3. Meme Exams */}
+            <div className="col-lg-3 col-sm-6 d-flex">
+              <div className="service-item text-center pt-3 w-100 d-flex flex-column">
+                <Link to="/exam" className="flex-grow-1">
+                  <div className="p-4 h-100 d-flex flex-column">
                     <i className="fa fa-3x fa-trophy text-warning mb-4" />
-                    <h5 className="mb-3">Leaderboard / Exam</h5>
-                    <p>
-                      Weekly fun quizzes & meme challenges.  
-                     
-                    </p>
+                    <h5 className="mb-3">Meme Exams</h5>
+                   
                   </div>
                 </Link>
               </div>
             </div>
 
             {/* 4. Roast-a-Guru */}
-            <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-              <div className="service-item text-center pt-3">
-                <Link to="/roast-guru">
-                  <div className="p-4">
+            <div className="col-lg-3 col-sm-6 d-flex">
+              <div className="service-item text-center pt-3 w-100 d-flex flex-column">
+                <Link to="/Meme-Generator" className="flex-grow-1">
+                  <div className="p-4 h-100 d-flex flex-column">
                     <i className="fa fa-3x fa-laugh text-primary mb-4" />
-                    <h5 className="mb-3">Roast-a-Guru</h5>
-                    <p>
-                      Meme contest where we roast famous “course sellers.”  
-                      Funniest memes get featured on the wall of fame!
-                    </p>
+                    <h5 className="mb-3">Meme Generator</h5>
+                   
                   </div>
                 </Link>
               </div>

@@ -8,7 +8,7 @@ import Spinner from '../Pages/Spinner'
 export default function () {
   return (
     <>
-    <Spinner/>
+   
     <Navbar/>
     <Header name="Testimonial"/>
     <Testimonial/>

@@ -1,194 +1,135 @@
-import React from "react";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
+import React, { useRef, useState, useEffect } from "react";
+import html2canvas from "html2canvas";
 
-export default function Contact() {
-  const [result, setResult] = React.useState("");
+export default function CertificateGenerator() {
+  const [name, setName] = useState(""); 
+  const [date, setDate] = useState("");
+  const certificateRef = useRef(null);
+  const timerRef = useRef(null); // store timeout id
 
-  const onHCaptchaChange = (token) => {
-    setValue("h-captcha-response", token);
+  useEffect(() => {
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+    setDate(formattedDate);
+  }, []);
+
+  const downloadCertificate = () => {
+    if (!name.trim()) return; 
+    html2canvas(certificateRef.current, { scale: 3 }).then((canvas) => {
+      const link = document.createElement("a");
+      link.download = `${name}_COURSE_Certificate.png`;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    });
   };
 
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
+  // Handle input change with max 10 chars
+  const handleNameChange = (e) => {
+    const value = e.target.value.slice(0, 10); // restrict 10 chars
+    setName(value);
 
-    formData.append("access_key", "b9fd69e0-c307-4f57-b90f-9c4106746fcb");
+    // Reset any existing timer
+    if (timerRef.current) clearTimeout(timerRef.current);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      setResult("Form Submitted Successfully");
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
+    // If value exists, start a 5-second countdown for auto-download
+    if (value.trim()) {
+      timerRef.current = setTimeout(() => {
+        downloadCertificate();
+      }, 3000);
     }
   };
 
   return (
-    <>
-      <div className="container-xxl py-5">
-        <div className="container">
-          <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 className="section-title bg-white text-center text-primary px-3">
-              Contact Us
-            </h6>
-            <h1 className="mb-5">Contact For Any Query</h1>
-          </div>
-          <div className="row g-4">
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.1s"
-            >
-              <h5>Get In Touch</h5>
-              <p className="mb-4">
-                The contact form is currently inactive. Please contact on phone,
-                mail or social-media.
-              </p>
-              <div className="d-flex align-items-center mb-3">
-                <div
-                  className="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
-                  style={{ width: "50px", height: "50px" }}
-                >
-                  <i className="fa fa-map-marker-alt text-white" />
-                </div>
-                <div className="ms-3">
-                  <h5 className="text-primary">Office</h5>
-                  <p className="mb-0">DSCET chennai,Tamil Nadu</p>
-                </div>
-              </div>
-              <div className="d-flex align-items-center mb-3">
-                <div
-                  className="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
-                  style={{ width: "50px", height: "50px" }}
-                >
-                  <i className="fa fa-phone-alt text-white" />
-                </div>
-                <div className="ms-3">
-                  <h5 className="text-primary">Mobile</h5>
-                  <p className="mb-0">+91 705 088 9705</p>
-                </div>
-              </div>
-              <div className="d-flex align-items-center">
-                <div
-                  className="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary"
-                  style={{ width: "50px", height: "50px" }}
-                >
-                  <i className="fa fa-envelope-open text-white" />
-                </div>
-                <div className="ms-3">
-                  <h5 className="text-primary">Email</h5>
-                  <p className="mb-0">basantgoswami7050@gmail.com</p>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.3s"
-            >
-              <iframe
-                className="position-relative rounded w-100 h-100"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4327.512444698837!2d80.17810250948644!3d12.620432297105136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53ab5250243c71%3A0xbb338ff75412f3f5!2sDhanalakshmi%20Srinivasan%20College%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1710127521636!5m2!1sen!2sin"
-                frameBorder={0}
-                style={{ minHeight: "300px", border: 0 }}
-                allowFullScreen
-                aria-hidden="false"
-                tabIndex={0}
-              />
-            </div>
-            <div
-              className="col-lg-4 col-md-12 wow fadeInUp"
-              data-wow-delay="0.5s"
-            >
-              <form onSubmit={onSubmit}>
-                <input type="hidden" name="from_name" value="eLearning" />
+    <div className="flex flex-col items-center justify-center min-h-screen p-6">
+      <h1 className="text-2xl font-bold mb-6 centeritall">
+        🎓 $COURSE Graduation Certificate
+      </h1>
 
-                <div className="row g-3">
-                  <div className="col-md-6">
-                    <div className="form-floating">
-                      <input
-                        type="text"
-                        className="form-control"
-                        name="name"
-                        id="name"
-                        placeholder="Your Name"
-                        required
-                      />
-                      <label htmlFor="name">Your Name</label>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-floating">
-                      <input
-                        type="email"
-                        className="form-control"
-                        id="email"
-                        name="email"
-                        placeholder="Your Email"
-                        required
-                      />
-                      <label htmlFor="email">Your Email</label>
-                    </div>
-                  </div>
-                  <div className="col-12">
-                    <div className="form-floating">
-                      <input
-                        type="number"
-                        className="form-control"
-                        id="phone"
-                        name="phone"
-                        placeholder="Mobile No"
-                        required
-                      />
-                      <label htmlFor="subject">Mobile No</label>
-                    </div>
-                  </div>
-                  <div className="col-12">
-                    <div className="form-floating">
-                      <textarea
-                        className="form-control"
-                        placeholder="Leave a message here"
-                        id="message"
-                        name="message"
-                        style={{ height: "150px" }}
-                        defaultValue={""}
-                      />
-                      <label htmlFor="message">Message</label>
-                    </div>
-                  </div>
-                  <input
-                    type="hidden"
-                    name="subject"
-                    value="New Submission from contact page"
-                  ></input>
-                  <div className="col-8">
-                    <HCaptcha
-                      sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-                      reCaptchaCompat={false}
-                      onVerify={onHCaptchaChange}
-                    />
-                  </div>
-                  <div className="col-12">
-                    <button
-                      className="btn btn-primary w-100 py-3"
-                      type="submit"
-                    >
-                      Send Message
-                    </button>
-                  </div>
-                </div>
-              </form>
-              <span>{result}</span>
-            </div>
+      {/* Input field */}
+      <div className="centeritall">
+        <input
+          type="text"
+          placeholder="Enter your name (max 10 letters)"
+          value={name}
+          onChange={handleNameChange}
+          maxLength={10}
+          className="border px-4 py-2 rounded mb-6 w-80 text-center shadow"
+        />
+      </div>
+      <br />
+
+      {/* Certificate preview */}
+      <div
+        ref={certificateRef}
+        className="relative shadow-2xl overflow-hidden w-full max-w-5xl aspect-[2000/1414]"
+        style={{
+          backgroundImage: `url("/img/diploma.png")`,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Center Overlay text */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+          <h2 className="text-[3vw] md:text-4xl font-bold text-yellow-700 mb-4 uppercase fonta">
+            Certificate of Graduation
+          </h2>
+
+          <p className="text-[1.5vw] md:text-xl italic mb-2">
+            This is proudly presented to
+          </p>
+
+          <h1
+            className="text-[4vw] md:text-6xl font-bold mt-2 mb-4 text-gray-800"
+            style={{ fontFamily: "cursive" }}
+          >
+            {name || " "}
+          </h1>
+
+          <p className="text-[1.5vw] md:text-xl mb-2">
+            for the successful completion of
+          </p>
+
+          <h2 className="text-[2.5vw] md:text-4xl font-semibold text-yellow-700 mb-4">
+            $COURSE University
+          </h2>
+        </div>
+
+        {/* Bottom Row (Signature - Seal - Date) */}
+        <div className="absolute bottom-[6%] inset-x-0 flex items-center justify-between px-[10%]">
+          {/* Date */}
+          <div className="text-center">
+            <p className="text-[1.5vw] md:text-xl font-semibold">{date}</p>
+          </div>
+
+          {/* Seal */}
+          <div className="flex justify-center centeritall">
+            <img
+              src="/img/seal.png"
+              alt="Official Seal"
+              className="w-[12vw] md:w-40 opacity-90 sealimg"
+            />
           </div>
         </div>
       </div>
-    </>
+
+      <br />
+      {/* Download Button */}
+      <div className="flex justify-center w-full centeritall">
+        <button
+          onClick={downloadCertificate}
+          disabled={!name.trim()}
+          className={`download-btn ${!name.trim() ? "disabled" : ""}`}
+        >
+          {name.trim()
+            ? "📥 Download Certificate (Auto in 2s)"
+            : "Enter Name First"}
+        </button>
+      </div>
+    </div>
   );
 }

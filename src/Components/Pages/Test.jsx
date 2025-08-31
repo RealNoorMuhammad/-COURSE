@@ -8,24 +8,72 @@ export default function Test() {
     return (
         <>
             <Navbar />
-            <div className='test mt-5'>
-                <div className='text-center'>
-                    <h3>Test Your knowledge</h3>
-                    <p>Give the Quiz assessment to enhance your learning and development. </p>
+            <div className='scam-uni'>
+                <div className='text-center hero-section'>
+                    <h1 className="scam-title">🎓 $COURSE Academy</h1>
+                    <p className="scam-subtitle">
+                        Where memes meet higher education <br />
+                        (and diplomas are printed on MS Paint)
+                    </p>
                 </div>
+
                 <div className="container d-flex align-items-center justify-content-center">
-                    <div className="list-group w-50 m-5">
-                        <Link to="/test/java" className="list-group-item list-group-item-action" aria-current="true">1. Java Programming Assesment
+                    <div className="list-group w-75 m-5 quiz-list">
+                        <h3 className="quiz-header">
+                           Totally Legit Exam ™
+                        </h3>
+
+                        <Link 
+                          to="/EXAM/quiz-week-1" 
+                          className="list-group-item list-group-item-action scam-card"
+                        >
+                          Spot the Fake Guru  
+                          <span className="quiz-note">
+                            – Earn your PhD in Lamborghini Studies 
+                          </span>
                         </Link>
-                        <Link to="/test/fullstack" className="list-group-item list-group-item-action">2. Full Stack Web Devlopment</Link>
-                        <a href="/test/React" className="list-group-item list-group-item-action">3. React js</a>
-                        <a href="/test/Javascript" className="list-group-item list-group-item-action">4. Java Script</a>
+
+                        <Link 
+                          to="/EXAM/quiz-week-2" 
+                          className="list-group-item list-group-item-action scam-card"
+                        >
+                          Crypto Astrology 101  (Under Development Unlock in Next Week)
+                          <span className="quiz-note">
+                            – Learn why Mercury Retrograde killed your bags 
+                          </span>
+                        </Link>
+
+                        <Link 
+                          to="/EXAM/quiz-week-3" 
+                          className="list-group-item list-group-item-action scam-card"
+                        >
+                          Meme Economics  (Under Development Unlock in Next Week)
+                          <span className="quiz-note">
+                            – Supply, Demand, and Dogecoin Logic 
+                          </span>
+                        </Link>
+
+                        <Link 
+                          to="/EXAM/quiz-week-4" 
+                          className="list-group-item list-group-item-action scam-card"
+                        >
+                          Hustlepreneur History  (Under Development Unlock in Next Week)
+                          <span className="quiz-note">
+                            – From Pyramid Schemes to TikTok Gurus 
+                          </span>
+                        </Link>
                     </div>
+                </div>
+
+                <div className="scam-footer text-center">
+                    <p>
+                        Disclaimer: Degrees are 100% useless but make you sound
+                        smart at family dinners 🍽️.
+                    </p>
                 </div>
             </div>
 
-            <Footer/>
-
+            <Footer />
         </>
     )
 }

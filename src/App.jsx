@@ -2,11 +2,14 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./Components/Pages/Home";
+import Privacy from './Components/Routes/Privacypolicy'
 import About1 from "./Components/Routes/About1";
 import Courses1 from "./Components/Routes/Courses1";
+import MemeGenerator from "./Components/Routes/Meme-Generator";
 import Team1 from "./Components/Routes/Team1";
 import Testimonial1 from "./Components/Routes/Testimonial1";
 import Contact1 from "./Components/Routes/Contact1";
+import RoastGuru from "./Components/Routes/RoastGuru";
 import ErrorPage from "./Components/Pages/ErrorPage";
 import Sign from "./Components/Pages/Sign";
 import SignUp from "./Components/Pages/Register";
@@ -27,6 +30,7 @@ import Html from "./Components/Course/Html";
 import Css from "./Components/Course/Css";
 import Advjava from "./Components/Course/Advjava";
 import JavaQuiz from "./Components/Quiz/JavaQuiz";
+
 import Test from "./Components/Pages/Test";
 import FullstackQuiz from "./Components/Quiz/FullstackQuiz";
 import JavascriptQuiz from "./Components/Quiz/JavascriptQuiz";
@@ -45,9 +49,14 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About1 />} />
           <Route path="/courses" element={<Courses1 />} />
+ <Route path="/Privacy-Policy" element={<Privacy />} />
+       
+    <Route path="/Meme-Generator" element={<MemeGenerator />} />
+      
           <Route path="/team" element={<Team1 />} />
           <Route path="/testimonial" element={<Testimonial1 />} />
-          <Route path="/contact" element={<Contact1 />} />
+          <Route path="/Certificate-generator" element={<Contact1 />} />
+          <Route path="/Roast-guru" element={<RoastGuru />} />
           <Route path="/error" element={<ErrorPage />} />
           <Route
             path="/signin"
@@ -58,8 +67,8 @@ function App() {
           <Route path="/register" element={<SignUp />} />
           <Route path="/profile" element={<Profile />} />
 
-          <Route path="/test" element={<Test />} />
-          <Route path="/test/java" element={<JavaQuiz />} />
+          <Route path="/EXAM" element={<Test />} />
+          <Route path="/EXAM/quiz-week-1" element={<JavaQuiz />} />
           <Route path="/test/fullstack" element={<FullstackQuiz />} />
           <Route path="/test/javascript" element={<JavascriptQuiz />} />
           <Route path="/test/react" element={<ReactQuiz />} />
