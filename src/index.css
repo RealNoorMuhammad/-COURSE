@@ -1,5 +1,5 @@
 .page-header {
-  background-color: #000 !important;
+  background-color: #000000 !important;
 }
 
 
@@ -261,7 +261,8 @@
 
 .sealimg{
   width: 100px;
-
+   position: relative;
+  bottom:30px;
 }
 
 
@@ -269,11 +270,24 @@
 @media (max-width: 576px) {
 
 .sealimg{
-  width: 35px;
+  width: 29px;
     position: relative;
-  bottom: 17px;
+  bottom:43px;
 }
 
+}
+
+.moveup{
+      position: relative;
+  bottom: 32px;
+}
+/* Even smaller for mobile */
+@media (max-width: 576px) {
+
+.moveup{
+      position: relative;
+  bottom: 38px;
+}
 }
 .fonta{
   font-size: 40px;
@@ -282,7 +296,7 @@
 @media (max-width: 576px) {
 
 .fonta{
-  font-size: 28px;
+  font-size: 21px;
   position: relative;
   top: 17px;
 }

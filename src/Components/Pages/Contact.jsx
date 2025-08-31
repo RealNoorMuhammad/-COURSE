@@ -102,7 +102,7 @@ export default function CertificateGenerator() {
         {/* Bottom Row (Signature - Seal - Date) */}
         <div className="absolute bottom-[6%] inset-x-0 flex items-center justify-between px-[10%]">
           {/* Date */}
-          <div className="text-center">
+          <div className="text-center moveup">
             <p className="text-[1.5vw] md:text-xl font-semibold">{date}</p>
           </div>
 

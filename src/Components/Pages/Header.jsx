@@ -3,7 +3,7 @@ import React from "react";
 export default function Header({ name }) {
   return (
     <>
-      <div className="container-fluid  py-5 mb-5 page-header page-header">
+      <div className="  py-5 mb-5 page-header ">
         <div className="container py-5">
           <div className="row justify-content-center">
             <div className="col-lg-10 text-center">

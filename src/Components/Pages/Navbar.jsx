@@ -88,7 +88,7 @@ export default function Navbar() {
     <NavLink to="/roast-guru" className="nav-item nav-link">
         Roast Guru
             </NavLink>
-            <NavLink to="/Certificate-Generator" className="nav-item nav-link">
+            <NavLink to="/Certificate-generator" className="nav-item nav-link">
           Certificate
             </NavLink>
 
