@@ -74,10 +74,16 @@
 }
 
 
+.imagepdf{
+  width: 70%;
+}
 
 
-
-
+@media (max-width: 768px) {
+  .imagepdf{
+  width: 100%;
+}
+}
 
 
 
