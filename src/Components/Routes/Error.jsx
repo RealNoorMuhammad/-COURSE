@@ -9,7 +9,7 @@ export default function Courses1() {
   return (
     <>
    
-    <Navbar/>
+  
 
     <Cources/>
  
