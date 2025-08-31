@@ -15,7 +15,7 @@ export default function About() {
               <div className="position-relative h-100">
                 <img
                   className="img-fluid position-absolute w-100 h-100"
-                  src="/img/pdf.png"
+                  src="/img/pdff.png"
                   alt="about $COURSE"
                   style={{ objectFit: "cover" }}
                 />
