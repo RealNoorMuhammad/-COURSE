@@ -10,7 +10,7 @@ import Team1 from "./Components/Routes/Team1";
 import Testimonial1 from "./Components/Routes/Testimonial1";
 import Contact1 from "./Components/Routes/Contact1";
 import RoastGuru from "./Components/Routes/RoastGuru";
-import ErrorPage from "./Components/Pages/ErrorPage";
+import ErrorPage from "./Components/Routes/Error";
 import Sign from "./Components/Pages/Sign";
 import SignUp from "./Components/Pages/Register";
 import Javaprog from "./Components/Course/Javaprog";

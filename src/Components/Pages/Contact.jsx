@@ -5,7 +5,6 @@ export default function CertificateGenerator() {
   const [name, setName] = useState(""); 
   const [date, setDate] = useState("");
   const certificateRef = useRef(null);
-  const timerRef = useRef(null); // store timeout id
 
   useEffect(() => {
     const today = new Date();
@@ -31,16 +30,6 @@ export default function CertificateGenerator() {
   const handleNameChange = (e) => {
     const value = e.target.value.slice(0, 10); // restrict 10 chars
     setName(value);
-
-    // Reset any existing timer
-    if (timerRef.current) clearTimeout(timerRef.current);
-
-    // If value exists, start a 5-second countdown for auto-download
-    if (value.trim()) {
-      timerRef.current = setTimeout(() => {
-        downloadCertificate();
-      }, 3000);
-    }
   };
 
   return (
@@ -125,9 +114,7 @@ export default function CertificateGenerator() {
           disabled={!name.trim()}
           className={`download-btn ${!name.trim() ? "disabled" : ""}`}
         >
-          {name.trim()
-            ? "📥 Download Certificate (Auto in 2s)"
-            : "Enter Name First"}
+          {name.trim() ? "📥 Download Certificate" : "Enter Name First"}
         </button>
       </div>
     </div>
